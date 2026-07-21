@@ -12,8 +12,8 @@ MAPEL_PER_JURUSAN = {
         ("Bahasa Inggris", "B_Inggris"),
         ("Informatika", "Informatika"),
         ("Projek Ilmu Pengetahuan Alam dan Sosial (IPAS)", "PIPAS"),
-        ("Dasar-Dasar Program Keahlian (TKJ)", "Dasar_Keahlian"),
-        ("Konsentrasi Keahlian (TKJ)", "Konsentrasi_Keahlian"),
+        ("Dasar-Dasar Program Keahlian", "Dasar_Keahlian"),
+        ("Konsentrasi Keahlian", "Konsentrasi_Keahlian"),
         ("Projek Kreatif dan Kewirausahaan (PKK)", "PKK"),
         ("Praktik Kerja Lapangan (PKL)", "PKL"),
         ("Komputer Grafis", "Komputer_Grafis"),
@@ -30,11 +30,11 @@ MAPEL_PER_JURUSAN = {
         ("Bahasa Inggris", "B_Inggris"),
         ("Informatika", "Informatika"),
         ("Projek Ilmu Pengetahuan Alam dan Sosial (IPAS)", "PIPAS"),
-        ("Dasar-Dasar Program Keahlian (AKL)", "Dasar_Keahlian"),
-        ("Konsentrasi Keahlian (Akuntansi)", "Konsentrasi_Keahlian"),
+        ("Dasar-Dasar Program Keahlian", "Dasar_Keahlian"),
+        ("Konsentrasi Keahlian", "Konsentrasi_Keahlian"),
         ("Projek Kreatif dan Kewirausahaan (PKK)", "PKK"),
         ("Praktik Kerja Lapangan (PKL)", "PKL"),
-        ("Praktikum Akuntansi Perusahaan Jasa, Dagang & Manufaktur", "Akuntansi_Perusahaan"),
+        ("Layanan Perbankan Syariah", "Perbankan_Syariah"),
         ("Bahasa dan Sastra Jawa", "B_Jawa")
     ]
 }
