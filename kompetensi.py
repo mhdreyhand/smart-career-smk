@@ -36,26 +36,31 @@ KOMPETENSI_PER_JURUSAN = {
         ]
     },
     "Akuntansi dan Keuangan Lembaga (AKL)": {
-        "Dasar-Dasar Program Keahlian (Kompetensi Dasar Akuntansi)": [
-            "Memahami proses bisnis di bidang akuntansi dan keuangan lembaga",
-            "Memahami perkembangan teknologi di industri keuangan (Fintech) dan etika profesi",
-            "Mengoperasikan aplikasi pengolah angka (Spreadsheet/Excel) untuk akuntansi",
-            "Memahami prinsip-prinsip dasar akuntansi dan perbankan dasar"
+        "Dasar-Dasar Program Keahlian (Kompetensi Umum & Inti)": [
+            "Menerapkan prinsip praktik profesional dalam bekerja",
+            "Menerapkan praktik-praktik kesehatan dan keselamatan di tempat kerja"
         ],
-        "Konsentrasi Keahlian (Kompetensi Akuntansi Keuangan)": [
-            "Memproses dokumen transaksi keuangan dan jurnal umum",
-            "Menyusun buku besar dan neraca saldo",
-            "Menyusun laporan keuangan (Laba Rugi, Perubahan Ekuitas, Neraca, Arus Kas)",
-            "Mengelola kartu piutang, utang, dan persediaan barang dagang",
-            "Memproses transaksi akuntansi menggunakan spreadsheet dan aplikasi komputer akuntansi (MYOB/Accurate)",
-            "Memproses transaksi perpajakan (PPh dan PPN) sesuai ketentuan perpajakan"
+        "Konsentrasi Keahlian (Kompetensi Pilihan/Fungsional)": [
+            "Memproses entry jurnal",
+            "Memproses buku besar",
+            "Menyusun laporan keuangan",
+            "Mengoperasikan paket program pengolah angka/spreadsheet",
+            "Mengoperasikan aplikasi komputer akuntansi"
         ],
         "Praktik Kerja Lapangan (PKL)": [
-            "Melakukan pencatatan bukti transaksi keuangan riil perusahaan",
-            "Mengoperasikan sistem/aplikasi komputer akuntansi di lingkungan kerja",
-            "Mengelola arsip/dokumen perpajakan dan keuangan lembaga",
-            "Penyusunan dan verifikasi laporan keuangan bulanan/tahunan",
-            "Melakukan verifikasi rekonsiliasi bank dan kas kecil"
+            "Menerapkan prinsip praktik profesional dalam bekerja",
+            "Menerapkan praktik-praktik kesehatan dan keselamatan di tempat kerja",
+            "Memproses entry jurnal",
+            "Memproses buku besar",
+            "Menyusun laporan keuangan",
+            "Mengoperasikan paket program pengolah angka/spreadsheet",
+            "Mengoperasikan aplikasi komputer akuntansi"
+        ],
+        "Layanan Perbankan Syariah": [
+            "Memahami prinsip dasar dan akad-akad perbankan syariah (Mudharabah, Musyarakah, Murabahah)",
+            "Memproses transaksi penghimpunan dan penyaluran dana bank syariah",
+            "Memahami prosedur administrasi dan pelayanan customer service / teller di lembaga keuangan syariah",
+            "Melakukan pencatatan akuntansi transaksi lembaga keuangan syariah"
         ]
     }
 }
