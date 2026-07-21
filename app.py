@@ -1,7 +1,7 @@
 import os
 import streamlit as st
 from groq import Groq
-from kompetensi import KOMPETENSI_KESTA  # Impor modul kompetensi ringkas
+from kompetensi import KOMPETENSI_KESTA  # Impor modul kompetensi
 
 # 1. KONFIGURASI HALAMAN
 st.set_page_config(page_title="Smart Career Path SMKN 1 Kasreman", page_icon="🎓", layout="centered")
@@ -53,7 +53,6 @@ col1, col2 = st.columns(2)
 dict_nilai_input = {}
 
 for idx, (label_formal, key) in enumerate(mapel_list):
-    # Selang-seling masukkan ke kolom 1 dan kolom 2
     target_col = col1 if idx % 2 == 0 else col2
     with target_col:
         val = st.number_input(
@@ -79,19 +78,19 @@ if st.button("🚀 Mulai Analisis Karier Saya", type="primary"):
     else:
         with st.spinner("Tim AI sedang berdiskusi menganalisis kompetensimu... Mohon tunggu..."):
             try:
-                # Inisialisasi Groq Client sesuai Panduan Dokumentasi Resmi
+                # Inisialisasi Groq Client
                 client = Groq(
                     api_key=os.environ.get("GROQ_API_KEY"),
                 )
                 
                 MODEL_NAME = "llama-3.3-70b-versatile" 
 
-                # Merangkai 16 nilai mata pelajaran menjadi teks terstruktur
+                # Merangkai 16 nilai mata pelajaran
                 teks_nilai_mapel = ""
                 for label_formal, nilai_val in dict_nilai_input.items():
                     teks_nilai_mapel += f"- {label_formal}: {nilai_val:.2f}\n"
 
-                # Merangkai Rincian Standar Kompetensi dari modul kompetensi.py
+                # Merangkai Rincian Standar Kompetensi
                 teks_kompetensi = ""
                 for mata_pelajaran, daftar_poin in KOMPETENSI_KESTA.items():
                     teks_kompetensi += f"\n📌 {mata_pelajaran}:\n"
@@ -103,17 +102,17 @@ if st.button("🚀 Mulai Analisis Karier Saya", type="primary"):
                 Transkrip Nilai Mata Pelajaran:
                 {teks_nilai_mapel}
 
-                Cakupan Standar Kompetensi Pembelajaran Kejuruan:
+                Cakupan Standar Kompetensi Pembelajaran Kejuruan & Praktik Lapangan:
                 {teks_kompetensi}
                 """
 
-                # ---- AGENT 1: Analis Rapor ----
+                # ---- AGENT 1: Analis Rapor (UPDATED PROMPT) ----
                 prompt_agent_1 = f"""Anda adalah Guru Produktif Senior SMK. Analisis data transkrip nilai siswa ini:
                 {data_siswa_smk}
 
                 Tugas Anda:
                 1. Analisis seluruh nilai mata pelajaran.
-                2. Khusus untuk mata pelajaran 'Dasar-Dasar Program Keahlian' dan 'Konsentrasi Keahlian', kaitkan capaian nilainya dengan cakupan standar kompetensi pembelajaran kejuruan yang disediakan.
+                2. Khusus untuk mata pelajaran 'Dasar-Dasar Program Keahlian', 'Konsentrasi Keahlian', dan 'Praktik Kerja Lapangan (PKL)', kaitkan capaian nilainya dengan cakupan standar kompetensi pembelajaran kejuruan & pengalaman praktik lapangan yang disediakan.
                 3. Jika nilainya tinggi (misal >= 80), uraikan poin-poin kompetensi yang telah dikuasai dengan baik. Jika kurang, sebutkan poin kompetensi yang masih perlu ditingkatkan.
                 4. Berikan laporan ringkas dan terstruktur dalam format Markdown."""
 
@@ -162,7 +161,7 @@ if st.button("🚀 Mulai Analisis Karier Saya", type="primary"):
                 
                 Susun laporan dengan struktur:
                 1. PENGANTAR
-                2. POTRET KOMPETENSI ANDA (Wajib sertakan kembali tabel/daftar 16 nilai mata pelajaran input di atas secara rapi, lalu berikan rangkuman singkat kelebihan & kekurangan rapor berdasarkan pencapaian unit kompetensi).
+                2. POTRET KOMPETENSI ANDA (Wajib sertakan kembali tabel/daftar 16 nilai mata pelajaran input di atas secara rapi, lalu berikan rangkuman singkat kelebihan & kekurangan rapor berdasarkan pencapaian unit kompetensi kejuruan dan PKL).
                 3. ANALISIS KESIAPAN DUNIA KERJA (Jabarkan Ekspektasi Umum Pasar Industri untuk posisi '{pekerjaan_impian}', Match Rate, Gap Skill, serta cantumkan Keterangan/Catatan bahwa standar rekrutmen bersifat general dan dapat bervariasi di tiap perusahaan).
                 4. RENCANA AKSI MANDIRI
                 5. KATA-KATA MOTIVASI PENUTUP."""
