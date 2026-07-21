@@ -48,19 +48,13 @@ KOMPETENSI_PER_JURUSAN = {
             "Mengoperasikan aplikasi komputer akuntansi"
         ],
         "Praktik Kerja Lapangan (PKL)": [
-            "Menerapkan prinsip praktik profesional dalam bekerja",
-            "Menerapkan praktik-praktik kesehatan dan keselamatan di tempat kerja",
+            "Menerapkan praktik profesional dalam bekerja",
+            "Menerapkan praktik kesehatan dan keselamatan di tempat kerja",
             "Memproses entry jurnal",
             "Memproses buku besar",
             "Menyusun laporan keuangan",
             "Mengoperasikan paket program pengolah angka/spreadsheet",
             "Mengoperasikan aplikasi komputer akuntansi"
-        ],
-        "Layanan Perbankan Syariah": [
-            "Memahami prinsip dasar dan akad-akad perbankan syariah (Mudharabah, Musyarakah, Murabahah)",
-            "Memproses transaksi penghimpunan dan penyaluran dana bank syariah",
-            "Memahami prosedur administrasi dan pelayanan customer service / teller di lembaga keuangan syariah",
-            "Melakukan pencatatan akuntansi transaksi lembaga keuangan syariah"
         ]
     }
 }
